@@ -1,0 +1,236 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html {
+  background-color: #f7ede2;
+}
+* {
+  box-sizing: border-box;
+}
+
+.button-container {
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: bc-anim;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes bc-anim {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.flexbox-container {
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(157, 163, 173, 0.925);
+  width: 75%;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: #f6bd60;
+  align-items: center;
+  margin: 0 10px 10px 10px;
+  animation: fc-anim;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fc-anim {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.flexbox-container-text {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  opacity: 0.7 !important;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.4rem;
+  animation: fct-anim;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fct-anim {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  animation: opacity-anim;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+.source-code-button {
+  cursor: pointer;
+  border: 3px solid #333;
+  border-radius: 10px;
+  background-color: #f7ede2;
+  font-size: 20px;
+}
+
+.source-code-button:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.3);
+}
+
+.icon {
+  width: 50px;
+  margin: 10px;
+}
+
+.icon:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.5);
+}
+
+@keyframes opacity-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flexbox-item {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #f7ede2;
+  border-radius: 10px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+}
+.flexbox-item::before {
+  content: "Flexbox Item";
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+}
+.flexbox-item::after {
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  bottom: 2%;
+}
+
+.flexbox-1 {
+  min-height: 10vh;
+  animation: bc-anim;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.flexbox-2 {
+  min-height: 15vh;
+  animation: bc-anim;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.flexbox-3 {
+  min-height: 20vh;
+  animation: bc-anim;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.flexbox-1::after {
+  content: "1";
+}
+.flexbox-2::after {
+  content: "2";
+}
+.flexbox-3::after {
+  content: "3";
+}
+
+.axis {
+  position: absolute;
+  opacity: 0.6;
+}
+
+.cross-axis {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: black;
+}
+
+.main-axis {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+
+.axis::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 2em;
+}
+
+.main-axis::after {
+  position: absolute;
+  content: "Main Axis";
+  color: black;
+}
+
+.cross-axis::after {
+  white-space: nowrap;
+  content: "Cross Axis";
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: black;
+}
