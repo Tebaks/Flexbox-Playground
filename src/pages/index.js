@@ -25,20 +25,20 @@ const Home = () => {
       <div className="contact-container">
         <h2>Contact me!</h2>
         <div className="icon-container">
-          <a href="https://github.com/Tebaks">
+          <a href="https://github.com/Tebaks" target="_blank" rel="noreferrer noopener">
             <img className="icon" src="/images/github.svg" alt="github" />
           </a>
-          <a href="https://www.linkedin.com/in/kenanabbak/">
+          <a href="https://www.linkedin.com/in/kenanabbak/" target="_blank" rel="noreferrer noopener">
             <img className="icon" src="/images/linkedin.svg" alt="linkedin" />
           </a>
-          <a href="https://kenanabbak.medium.com/">
+          <a href="https://kenanabbak.medium.com/" target="_blank" rel="noreferrer noopener">
             <img className="icon" src="/images/medium.svg" alt="medium" />
           </a>
           <a href="mailto: kenanabbak@hotmail.com">
             <img className="icon" src="/images/email.svg" alt="email" />
           </a>
         </div>
-        <a href="https://github.com/Tebaks/Flexbox-Playground">
+        <a href="https://github.com/Tebaks/Flexbox-Playground" target="_blank" rel="noreferrer noopener">
           <button className="source-code-button">Source Code</button>
         </a>
 
